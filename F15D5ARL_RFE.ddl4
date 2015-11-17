@@ -1,0 +1,234 @@
+drop view F15D5Requestor_view ;
+drop view F15D5Lab_Dir_view ;
+drop view F15D5System_Admin_view ;
+drop view F15D5Chairperson_view ;
+drop view F15D5Exec_Dir_view ;
+
+create view F15D5Requestor_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5Employee where emp_id IN (SELECT F15D5_emp_emp_id FROM F15D5_RFE);
+
+create view F15D5Lab_Dir_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5Employee where lab_dir_flag = TRUE ;
+
+create or replace TRIGGER F15D5Lab_Dir_view
+     INSTEAD OF insert ON F15D5Lab_Dir_view
+     FOR EACH ROW
+BEGIN
+    insert into F15D5Employee( 
+        emp_id,
+        auth_id, 
+        lab_id,
+        name,
+        email,
+        office,
+        phone,
+        active,
+        status_eff_date,
+        sys_admin_flag,
+        lab_dir_flag,
+        exec_dir_flag,
+        chairperson_flag)
+    VALUES ( 
+		:NEW.employee_id,
+		:NEW.auth_id,
+		:NEW.lab_id,
+		:NEW.name,
+        :NEW.email,
+		:NEW.office,
+        :NEW.phone,
+        :NEW.active,
+		:NEW.status_eff_date,
+        false,
+        true,
+        false,
+        false) ;
+END;
+/
+
+create view F15D5Lab_Sys_Admin_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5Employee where sys_admin_flag = true ;
+
+create or replace TRIGGER F15D5Lab_Sys_Admin_view
+     INSTEAD OF insert ON F15D5Lab_Sys_Admin_view
+     FOR EACH ROW
+BEGIN
+    insert into F15D5Employee( 
+        emp_id,
+        auth_id, 
+        lab_id,
+        name,
+        email,
+        office,
+        phone,
+        active,
+        status_eff_date,
+        sys_admin_flag,
+        lab_dir_flag,
+        exec_dir_flag,
+        chairperson_flag)
+    VALUES ( 
+		:NEW.employee_id,
+		:NEW.auth_id,
+		:NEW.lab_id,
+		:NEW.name,
+        :NEW.email,
+		:NEW.office,
+        :NEW.phone,
+        :NEW.active,
+		:NEW.status_eff_date,
+        true,
+        false,
+        false,
+        false) ;
+END;
+/
+
+create view F15D5Chairperson_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5Employee where chairperson_flag = true ;
+
+create or replace TRIGGER F15D5Chairperson_trigger
+     INSTEAD OF insert ON F15D5Chairperson_view
+     FOR EACH ROW
+BEGIN
+    insert into F15D5Employee( 
+        emp_id,
+        auth_id, 
+        lab_id,
+        name,
+        email,
+        office,
+        phone,
+        active,
+        status_eff_date,
+        sys_admin_flag,
+        lab_dir_flag,
+        exec_dir_flag,
+        chairperson_flag)
+    VALUES ( 
+		:NEW.employee_id,
+		:NEW.auth_id,
+		:NEW.lab_id,
+		:NEW.name,
+        :NEW.email,
+		:NEW.office,
+        :NEW.phone,
+        :NEW.active,
+		:NEW.status_eff_date,
+        false,
+        false,
+        false,
+        true) ;
+END;
+/
+
+create view F15D5Exec_Dir_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5Employee where exec_dir_flag = true ;
+
+create or replace TRIGGER F15D5Exec_Dir_trigger
+     INSTEAD OF insert ON F15D5Exec_Dir_view
+     FOR EACH ROW
+BEGIN
+    insert into F15D5Employee( 
+        emp_id,
+        auth_id, 
+        lab_id,
+        name,
+        email,
+        office,
+        phone,
+        active,
+        status_eff_date,
+        sys_admin_flag,
+        lab_dir_flag,
+        exec_dir_flag,
+        chairperson_flag)
+    VALUES ( 
+		:NEW.employee_id,
+		:NEW.auth_id,
+		:NEW.lab_id,
+		:NEW.name,
+        :NEW.email,
+		:NEW.office,
+        :NEW.phone,
+        :NEW.active,
+		:NEW.status_eff_date,
+        false,
+        false,
+        true,
+        false) ;
+END;
+/
+
+
+
+
