@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="19C70666-D65E-ADCB-5D2E-797548AE26C8" name="F15D5_Doc">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:35:40 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="doc_id" id="77C5451A-A6F7-3536-4449-62003B9117C2">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:35:58 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="EE5F04BB-7193-5FC8-2A38-373FABE1A96F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:36:24 UTC</createdTime>
+<generatorID>8924B7A8-B90E-C898-DA7F-D6942C9335FD</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>74EBDBE1-AB19-F1F0-397B-9EE5F7C979E8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="filename" id="50B59A56-9CD0-9A07-4D6E-A8F093DF737F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:19:27 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_mimetype" id="4852793F-983B-0F94-D327-02C8717B3968">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:19:43 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_charset" id="8D504137-67AC-C758-2151-E9084AB7E5DD">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:20:01 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_blob" id="A9084F3A-64C9-A829-186A-E4B3B2D4AF90">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:20:23 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_comments" id="4A450C59-68C1-A157-C270-1F93CA4B4DCD">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:20:30 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tags" id="376254F9-0202-6660-5831-2F4A48658BB3">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-14 18:20:42 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="614F20F4-3CC2-FEFD-7E91-39C80D2A0850" name="F15D5_Doc PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:36:07 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>77C5451A-A6F7-3536-4449-62003B9117C2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

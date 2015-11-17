@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="01D655C7-8A27-9C33-7BA3-A62749C1BE23" name="F15D5Role_Codes" seqName="seg_0"/>
+   <object objectType="Table" objectID="469D25E7-B33A-516A-8CC9-F31D0A58D543" name="F15D5_Auth" seqName="seg_0"/>
+   <object objectType="Table" objectID="C8CCA993-83C2-3683-FA67-823609014E99" name="F15D5_Comments" seqName="seg_0"/>
+   <object objectType="Table" objectID="52A00050-50BB-4BF7-EC77-091860591997" name="F15D5_Doc" seqName="seg_0"/>
+   <object objectType="Table" objectID="17471CA6-9980-FF63-6C93-E4C0FFC2F9B4" name="F15D5_Lab" seqName="seg_0"/>
+   <object objectType="Table" objectID="C876AB1E-9E94-0418-18A5-374C0A8017E7" name="F15D5_RFE" seqName="seg_0"/>
+   <object objectType="Table" objectID="1BAF01F7-E770-AA94-E171-8E0334326361" name="F15D5_StatHis" seqName="seg_0"/>
+   <object objectType="Table" objectID="9018F7FC-BD21-ADCF-DCA1-5ABE2A94C862" name="F15D5_Status" seqName="seg_0"/>
+   <object objectType="Table" objectID="B084F5F4-7E16-0822-E919-A787E35B5379" name="F15D5_Task" seqName="seg_0"/>
+   <object objectType="Table" objectID="203FD387-4B21-70CE-7753-D0B8BB6DA447" name="F15D5_emp" seqName="seg_0"/>
+   <object objectType="Table" objectID="8B205191-3F3C-4C31-B5C0-F8B52BA54121" name="FYIReviewerOrContacts" seqName="seg_0"/>
+   <object objectType="Table" objectID="5D6E6F90-AE34-E1B1-31D6-C776CF306190" name="RfeTask_relation" seqName="seg_0"/>
+   <object objectType="Table" objectID="AC2DCEF4-9230-24E6-D29D-A650208C4274" name="approvers" seqName="seg_0"/>
+   <object objectType="Table" objectID="7695EE9B-8767-A69D-CD32-E926BA529890" name="role" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="0C87FBE6-F265-5DE6-426B-6C1733815349" name="F15D5_Auth_F15D5_emp_FK" seqName="seg_0" containerID="469D25E7-B33A-516A-8CC9-F31D0A58D543" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="2186C871-AC38-55BE-C9B4-ECC9A9DBE855" name="F15D5_Comments_F15D5_RFE_FK" seqName="seg_0" containerID="C8CCA993-83C2-3683-FA67-823609014E99" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="28EA7472-6EB4-85AB-D384-EF8A0A4724E6" name="F15D5_Comments_F15D5_emp_FK" seqName="seg_0" containerID="C8CCA993-83C2-3683-FA67-823609014E99" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="2418C72E-A68C-67E8-2DF1-BC5F10BEE590" name="F15D5_Doc_F15D5_RFE_FK" seqName="seg_0" containerID="52A00050-50BB-4BF7-EC77-091860591997" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="2954D8B9-C9B8-91C9-B973-240DC73EE5D0" name="F15D5_RFE_F15D5_Status_FK" seqName="seg_0" containerID="C876AB1E-9E94-0418-18A5-374C0A8017E7" refContainerID="9018F7FC-BD21-ADCF-DCA1-5ABE2A94C862"/>
+   <object objectType="FKIndexAssociation" objectID="DC635C7C-97B5-E738-0F73-992FF2FE5360" name="F15D5_RFE_F15D5_emp_FK" seqName="seg_0" containerID="C876AB1E-9E94-0418-18A5-374C0A8017E7" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="8FBF72EA-B612-7FF8-5D33-0AD429D25D0A" name="F15D5_StatHis_F15D5_RFE_FK" seqName="seg_0" containerID="1BAF01F7-E770-AA94-E171-8E0334326361" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="A61DDAD6-385E-ED4F-33F5-2A89B8926809" name="F15D5_StatHis_F15D5_emp_FK" seqName="seg_0" containerID="1BAF01F7-E770-AA94-E171-8E0334326361" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="7D27F26A-2B10-072A-D4B0-314B39AB3D16" name="F15D5_emp_F15D5_Auth_FK" seqName="seg_0" containerID="203FD387-4B21-70CE-7753-D0B8BB6DA447" refContainerID="469D25E7-B33A-516A-8CC9-F31D0A58D543"/>
+   <object objectType="FKIndexAssociation" objectID="3D9AF5F2-D678-4932-40F9-6BB223E9A8AD" name="F15D5_emp_F15D5_Lab_FK" seqName="seg_0" containerID="203FD387-4B21-70CE-7753-D0B8BB6DA447" refContainerID="17471CA6-9980-FF63-6C93-E4C0FFC2F9B4"/>
+   <object objectType="FKIndexAssociation" objectID="59281001-0E12-CE79-4B4E-E667F3180C06" name="FK_ASS_1" seqName="seg_0" containerID="8B205191-3F3C-4C31-B5C0-F8B52BA54121" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="1788E98B-B7BE-5F75-5B9E-F348DE1C0185" name="FK_ASS_11" seqName="seg_0" containerID="5D6E6F90-AE34-E1B1-31D6-C776CF306190" refContainerID="B084F5F4-7E16-0822-E919-A787E35B5379"/>
+   <object objectType="FKIndexAssociation" objectID="7B193C3B-EAA3-0F45-6611-7DD09213B91E" name="FK_ASS_12" seqName="seg_0" containerID="5D6E6F90-AE34-E1B1-31D6-C776CF306190" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="22756F47-F8C9-D04D-3F32-0F493445B2CC" name="FK_ASS_17" seqName="seg_0" containerID="7695EE9B-8767-A69D-CD32-E926BA529890" refContainerID="01D655C7-8A27-9C33-7BA3-A62749C1BE23"/>
+   <object objectType="FKIndexAssociation" objectID="2877897E-6A73-2FF6-5882-B2BC1C330638" name="FK_ASS_18" seqName="seg_0" containerID="7695EE9B-8767-A69D-CD32-E926BA529890" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="748410EF-CCA1-2B32-A40B-85A056849245" name="FK_ASS_2" seqName="seg_0" containerID="8B205191-3F3C-4C31-B5C0-F8B52BA54121" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+   <object objectType="FKIndexAssociation" objectID="44CACC5A-A9EC-C3D7-53DC-B9B5C9C4D5B0" name="FK_ASS_3" seqName="seg_0" containerID="AC2DCEF4-9230-24E6-D29D-A650208C4274" refContainerID="C876AB1E-9E94-0418-18A5-374C0A8017E7"/>
+   <object objectType="FKIndexAssociation" objectID="2C0E3BFA-E1E7-FC5A-959B-071270A88BBC" name="FK_ASS_4" seqName="seg_0" containerID="AC2DCEF4-9230-24E6-D29D-A650208C4274" refContainerID="203FD387-4B21-70CE-7753-D0B8BB6DA447"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

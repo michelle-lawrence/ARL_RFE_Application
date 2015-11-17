@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FYIReviewerOrContacts" directorySegmentName="seg_0" id="D296F6E3-6974-B1D1-8EA8-ECD15449FC6F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:25:17 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>9EB534CF-E96C-2CDF-7A93-F556FE89AAF1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0AF58725-D8A1-57D7-C964-010B65912553</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="contact_role_code" id="EFA8D8F6-E700-0D3A-52E9-6B1C8C828525">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-11 21:33:21 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="effective_date" id="8E3016CA-3A18-8FB2-0AF0-2650E082F68F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-11 21:34:11 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="comments" id="98DD1CCC-C5DD-E9A1-A502-FB9B8D0F44BB">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-11 21:34:54 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

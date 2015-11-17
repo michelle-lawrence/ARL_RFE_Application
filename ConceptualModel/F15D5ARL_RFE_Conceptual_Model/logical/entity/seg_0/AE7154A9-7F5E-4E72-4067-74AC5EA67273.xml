@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE7154A9-7F5E-4E72-4067-74AC5EA67273" name="F15D5_Comments">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:36:34 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="comment_id" id="1597B14E-31B7-EE5B-869B-FB58B98D3427">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:36:43 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="33B3B704-B97C-19AA-9211-9C5E1630A2D3">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:37:03 UTC</createdTime>
+<generatorID>25C2273A-3F4F-F6A5-FA38-2010445260B6</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>74EBDBE1-AB19-F1F0-397B-9EE5F7C979E8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_id" id="B15B2B1C-CE1D-F336-B369-AF764B3BEA8A">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:41:21 UTC</createdTime>
+<generatorID>1F706DEA-CC95-1322-EC3D-428C296777DD</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>18836D62-F9B5-A7D2-B3DD-93C326D489BB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entry_date" id="D11C2770-2AE1-62A6-A82D-EAC5E6A6B7D5">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-11 21:37:29 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="51998FDF-87AC-BE1A-996C-2EE1BEE4AF56">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-11 21:38:01 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A45AF773-267C-BC89-A45B-C7BC11200DEE" name="F15D5_Comments PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-02 22:36:50 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1597B14E-31B7-EE5B-869B-FB58B98D3427</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
