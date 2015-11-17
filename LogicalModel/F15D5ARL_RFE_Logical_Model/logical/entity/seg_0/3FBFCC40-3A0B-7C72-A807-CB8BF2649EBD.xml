@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3FBFCC40-3A0B-7C72-A807-CB8BF2649EBD" name="F15D5 emp">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>949A2E95-22F0-E3CC-C647-BF31A84E0CB5</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="emp id" id="5F2DE0ED-FBDD-902C-9014-6109375B575C">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>03C12268-C20E-443C-EA86-63EFB2F8BE48</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15D5 Lab lab id" id="3706F87C-56CB-3306-1725-BDB76A90E493">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>55FBAA04-4344-9143-5F55-46EE425CD363</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>474F4039-36B8-E7F8-B17A-1E4227F2855D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="64AC4BE6-5AC4-AAED-3804-206E64AA109B">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>501F7385-AB00-529D-94CF-3A90E1C3D098</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="985924AA-6E28-D536-AF0C-D3DCC4A7E533">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>53673104-511E-37C7-D602-42FFC0EB0771</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="office" id="8077DF65-01D3-831F-3ED3-932AD4B317A0">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>8A387AEB-BA15-F1A3-BF8F-A517B4DCC18A</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone" id="F6C6388B-5DB8-1788-537D-BDEA47C6E903">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>E2E9329D-9294-758A-F30A-A4AC82F178C5</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="CA952D24-6205-1FD3-D618-5BADC997886F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>2250AB68-23CF-9E01-19E5-555AB26E874B</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status eff date" id="04A8DFDB-F650-1864-45F4-7E0B9EAFD41C">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>4DF51882-5844-4C65-D243-6599BC5585A3</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sys admin flag" id="F36764EA-DFBC-86EC-D1A9-D76DFC969A59">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>54304884-D496-DD2D-5A52-85316AC8D08A</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab dir flag" id="4522C2A4-A012-9226-95F7-9F5EC758EC25">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>5FE4A23A-F4D4-4536-BCCA-6DD7EA69792A</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exec dir flag" id="8C9536BE-7E4C-D636-F485-D58E9B96A102">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>902CC667-2602-AEC8-45D4-C86FA8DAA713</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="chairperson flag" id="30F93EF2-DC75-9C72-ED71-82B0985030E0">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>A61B110D-3BB4-55C6-6F01-4618DCFF73E2</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15D5 Auth auth id" id="1A268771-496F-0E3C-78FB-2F25A1366920">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>39C2C83D-D0C3-3537-7126-6AAE7336B514</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B7E6E585-359C-5BD7-FCB4-B7CACFC091BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7477384E-D68E-B3D0-8F07-8DED0DFF6A2F" name="F15D5 emp PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>1CC45F9F-A0F4-EF69-DE7F-AA2A0558F8B9</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5F2DE0ED-FBDD-902C-9014-6109375B575C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

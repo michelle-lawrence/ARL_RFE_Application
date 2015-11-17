@@ -14,9 +14,9 @@
    <object objectType="Entity" objectID="E744DC92-D7AC-BB55-EE01-3E7A49A222E3" name="F15D5_Status" seqName="seg_0"/>
    <object objectType="Entity" objectID="BF256B79-9D45-66F1-701D-236EC6E72A5C" name="F15D5_Task" seqName="seg_0"/>
    <object objectType="Entity" objectID="0AF58725-D8A1-57D7-C964-010B65912553" name="F15D5_emp" seqName="seg_0"/>
-   <object objectType="Relation" objectID="D296F6E3-6974-B1D1-8EA8-ECD15449FC6F" name="FYIReviewerOrContacts" seqName="seg_0"/>
    <object objectType="Relation" objectID="4F22DBF7-90EE-CCE2-A68B-15B78217970B" name="approvers" seqName="seg_0"/>
-   <object objectType="Relation" objectID="BA45346D-1A4B-9794-E07B-2A644AF9DE19" name="r1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8C56DA2E-8C1E-3D3A-06A1-3930245F55C5" name="auth_emp" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D296F6E3-6974-B1D1-8EA8-ECD15449FC6F" name="contact" seqName="seg_0"/>
    <object objectType="Relation" objectID="7EDBB11F-3A1C-DFAB-D2AE-F69158AB6CFE" name="r11" seqName="seg_0"/>
    <object objectType="Relation" objectID="5E984E8F-E3E4-CA41-ED07-02069B19DEAA" name="r2" seqName="seg_0"/>
    <object objectType="Relation" objectID="6B083D70-3F53-BD9B-CD7D-B102945A9892" name="r2v1" seqName="seg_0"/>

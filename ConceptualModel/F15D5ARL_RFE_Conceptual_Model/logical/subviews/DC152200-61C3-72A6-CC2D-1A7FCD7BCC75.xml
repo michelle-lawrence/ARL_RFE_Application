@@ -44,7 +44,7 @@
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="88C40C29-3513-5CBE-B5C5-736362B49BAE" otype="Entity" vid="7B4255E0-8839-94A9-11F3-97E4E7687064">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="24" y="389" width="170" height="110"/>
+<bounds x="16" y="523" width="170" height="110"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="9EB534CF-E96C-2CDF-7A93-F556FE89AAF1" otype="Entity" vid="D80B614A-2B62-B845-6086-189B3CFF7C10">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -176,20 +176,20 @@
 <point x="556" y="207"/>
 </points>
 </Connector>
+<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="8C56DA2E-8C1E-3D3A-06A1-3930245F55C5" otype="Relation" vid_source="7B4255E0-8839-94A9-11F3-97E4E7687064" vid_target="47E395B9-0F94-355C-CC26-EA7BB141A737">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="186" y="568"/>
+<point x="272" y="568"/>
+</points>
+</Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="AADE06EE-C105-2955-9E00-03109F5CAEE1" otype="Relation" vid_source="07D6DF46-D403-010C-45A3-0B917903264F" vid_target="D80B614A-2B62-B845-6086-189B3CFF7C10">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
 <lineWidth>1</lineWidth>
 <points>
 <point x="555" y="291"/>
 <point x="460" y="291"/>
-</points>
-</Connector>
-<Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="BA45346D-1A4B-9794-E07B-2A644AF9DE19" otype="Relation" vid_source="47E395B9-0F94-355C-CC26-EA7BB141A737" vid_target="7B4255E0-8839-94A9-11F3-97E4E7687064">
-<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<lineWidth>1</lineWidth>
-<points>
-<point x="272" y="444"/>
-<point x="194" y="458"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="D296F6E3-6974-B1D1-8EA8-ECD15449FC6F" otype="Relation" vid_source="D80B614A-2B62-B845-6086-189B3CFF7C10" vid_target="47E395B9-0F94-355C-CC26-EA7BB141A737">

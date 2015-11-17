@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5463D93F-BB98-5396-AC60-6E10C870557F" name="F15D5 StatHis">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>317AEE50-044B-9484-B421-3483CAE3FF0C</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="hist id" id="BA06F4A4-AA1E-0134-A5D6-46E244ECE171">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>4CF36E0F-DD2E-E63F-398D-D79C1D9CAB3C</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15D5 RFE rfe id" id="8ED411A6-BA00-CA78-AF67-DDD0E9B760FB">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>AF4B81C5-BC23-0EBB-4D11-F7366678F26A</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F4D93F4D-0F9D-A181-444B-E6AC1FA61F3B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status code" id="3F897543-58BB-0DB2-E5DF-29D24432FFB4">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>82D52378-E43C-BBAA-B0E9-8509DB4D8C09</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="effective date" id="9FEAB14C-1A9A-8114-4E28-66EE327E6A73">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>EDE52D23-C59E-1A7C-BF90-EF80F1F29FF5</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15D5 emp emp id" id="0D10C707-600C-FAEF-4DC8-D2EAB1CD851B">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>B85D7862-7280-2F96-B850-D2269B894568</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5F2DE0ED-FBDD-902C-9014-6109375B575C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="923551B4-A9C6-19DE-DC59-AAADF2791206" name="F15D5 StatHis PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:14:25 UTC</createdTime>
+<generatorID>74FF5F1C-DA22-C9EC-A663-7305BA1C0DE0</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BA06F4A4-AA1E-0134-A5D6-46E244ECE171</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

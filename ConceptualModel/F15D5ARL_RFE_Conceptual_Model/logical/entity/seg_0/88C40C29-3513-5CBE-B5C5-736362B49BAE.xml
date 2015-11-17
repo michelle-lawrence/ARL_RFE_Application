@@ -41,21 +41,6 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="emp_id" id="D793D03B-1D71-4619-E84B-FE565DF44A6C">
-<createdBy>Michelle</createdBy>
-<createdTime>2015-11-02 22:15:57 UTC</createdTime>
-<generatorID>BA45346D-1A4B-9794-E07B-2A644AF9DE19</generatorID>
-<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
-<engineerTo>
-<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>18836D62-F9B5-A7D2-B3DD-93C326D489BB</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="315691B8-DE4B-042C-8C38-3C32B737EBD7" name="F15D5_Auth PK">

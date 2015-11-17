@@ -14,7 +14,6 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<attributeInherType>All atributes</attributeInherType>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
 <Attribute name="emp_id" id="18836D62-F9B5-A7D2-B3DD-93C326D489BB">
 <createdBy>Michelle</createdBy>
@@ -23,21 +22,6 @@
 <engineerTo>
 <item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="auth_id" id="5AE1C3A2-749A-A05E-240B-0A9460FEF2EC">
-<createdBy>Michelle</createdBy>
-<createdTime>2015-11-02 22:16:03 UTC</createdTime>
-<generatorID>BA45346D-1A4B-9794-E07B-2A644AF9DE19</generatorID>
-<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
-<engineerTo>
-<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>1BA783B8-92DB-1625-8256-D49A93F57D8D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -186,6 +170,21 @@
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_id" id="CDCFC0EA-BF41-C92E-619C-D87B01C63C62">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:08:48 UTC</createdTime>
+<generatorID>8C56DA2E-8C1E-3D3A-06A1-3930245F55C5</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>1BA783B8-92DB-1625-8256-D49A93F57D8D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

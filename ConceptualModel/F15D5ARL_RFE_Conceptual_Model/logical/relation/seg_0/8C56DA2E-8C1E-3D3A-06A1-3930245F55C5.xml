@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="auth_emp" directorySegmentName="seg_0" id="8C56DA2E-8C1E-3D3A-06A1-3930245F55C5">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:08:48 UTC</createdTime>
+<ownerDesignName>F15D5ARL_RFE_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
+</engineerTo>
+<sourcePk>315691B8-DE4B-042C-8C38-3C32B737EBD7</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>88C40C29-3513-5CBE-B5C5-736362B49BAE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0AF58725-D8A1-57D7-C964-010B65912553</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

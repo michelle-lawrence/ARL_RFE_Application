@@ -3,9 +3,8 @@
 <createdBy>Michelle</createdBy>
 <createdTime>2015-11-02 22:06:06 UTC</createdTime>
 <ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="false"/>
+<item key="D4B97A89-2E3C-FCD7-2774-BBBD5AACE290" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>

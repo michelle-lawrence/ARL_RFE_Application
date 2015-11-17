@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="317AEE50-044B-9484-B421-3483CAE3FF0C" name="F15D5_StatHis">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>6D279C19-7B08-E242-1145-CBA614CC3121</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="hist_id" id="4CF36E0F-DD2E-E63F-398D-D79C1D9CAB3C">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>F72A03A9-B707-ADAC-F077-D6A521CAF9CE</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15D5_RFE_rfe_id" id="61975FD4-2A37-7A61-3772-33188F056F1C">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>67644741-0A3B-BDD2-DEBD-921899E7859B</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F0C5CD3-E49C-3071-D552-DDECE76CD5EA" referredColumn="0BEECA5A-6A6D-C093-7D6C-6E4F86E0B9AB"/>
+</associations>
+</Column>
+<Column name="status_code" id="82D52378-E43C-BBAA-B0E9-8509DB4D8C09">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>F234AB89-360F-4E8C-315C-8C96A45B7D7F</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="effective_date" id="EDE52D23-C59E-1A7C-BF90-EF80F1F29FF5">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>CB3B7B48-29BB-DB6C-265B-0BDF13FC9BB1</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15D5_emp_emp_id" id="6D434CE2-B333-2616-CA58-B521708D3ED4">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>8EF6E25C-BE2A-8FE3-8867-0E6CEFD0F714</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="134CD0E1-90AA-EC0A-BCC8-80758FA694FE" referredColumn="03C12268-C20E-443C-EA86-63EFB2F8BE48"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74FF5F1C-DA22-C9EC-A663-7305BA1C0DE0" name="F15D5_StatHis_PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>81517133-F6DC-16FA-5D1C-4EB2EF9C36D4</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CF36E0F-DD2E-E63F-398D-D79C1D9CAB3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06DF4E9B-869A-C06B-9160-169DB0E2B373" name="F15D5_StatHis_F15D5_emp_FK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>7EDBB11F-3A1C-DFAB-D2AE-F69158AB6CFE</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D434CE2-B333-2616-CA58-B521708D3ED4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DEA560DE-BA01-DACF-9B75-0F9A2E86BB47" name="F15D5_StatHis_F15D5_RFE_FK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-17 18:12:24 UTC</createdTime>
+<generatorID>8B1FB83F-0FAD-1C53-07E1-EAC65DF9EC9F</generatorID>
+<ownerDesignName>F15D5ARL_RFE_Logical_Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61975FD4-2A37-7A61-3772-33188F056F1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
