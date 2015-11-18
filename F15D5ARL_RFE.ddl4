@@ -4,23 +4,6 @@ drop view F15D5System_Admin_view ;
 drop view F15D5Chairperson_view ;
 drop view F15D5Exec_Dir_view ;
 
-create view F15D5Requestor_view as
-SELECT 
-    emp_id,
-    auth_id, 
-    lab_id,
-    name,
-    email,
-    office,
-    phone,
-    active,
-    status_eff_date,
-    sys_admin_flag,
-    lab_dir_flag,
-    exec_dir_flag,
-    chairperson_flag
-FROM F15D5Employee where emp_id IN (SELECT F15D5_emp_emp_id FROM F15D5_RFE);
-
 create view F15D5Lab_Dir_view as
 SELECT 
     emp_id,
@@ -226,6 +209,44 @@ BEGIN
         false,
         true,
         false) ;
+END;
+/
+
+CREATE OR REPLACE TRIGGER update_status_history
+  AFTER INSERT OR UPDATE ON F15D5_RFE
+  FOR EACH ROW
+BEGIN
+    INSERT INTO F15D5_StatHis VALUES
+    (hist_id.NEXTVAL, :new.rfe_id, :new.status_id, SYSDATE, v('P3_PERSON_CHANGED'));
+END;
+/
+
+CREATE OR REPLACE TRIGGER add_new_comment
+  AFTER INSERT OR UPDATE ON F15D5_RFE
+  FOR EACH ROW
+BEGIN
+    INSERT INTO F15D5_Comments VALUES
+    (comment_id.NEXTVAL, :new.rfe_id, v('P3_PERSON_CHANGED'), SYSDATE, v('P3_COMMENT_BOX'));
+END;
+/
+
+CREATE OR REPLACE TRIGGER employees_before_update
+BEFORE UPDATE ON F15D5_emp
+FOR EACH ROW
+BEGIN
+  SELECT COUNT(*) as dir_count FROM F15D5_emp
+  WHERE exec_dir_flag = true
+  GROUP BY emp_id;
+  IF dir_count >= 1 THEN
+        RAISE_APPLICATION_ERROR(-2001, 'There cannot be more than one Executive Director.');
+  END IF;
+
+  SELECT COUNT(*) as chair_count FROM F15D5_emp
+  WHERE chairperson_flag = true
+  GROUP BY emp_id;
+  IF chair_count >= 1 THEN
+        RAISE_APPLICATION_ERROR(-2001, 'There cannot be more than one Chairperson.');
+  END IF;
 END;
 /
 
