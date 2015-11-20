@@ -4,6 +4,23 @@ drop view F15D5System_Admin_view ;
 drop view F15D5Chairperson_view ;
 drop view F15D5Exec_Dir_view ;
 
+create view F15D5Requestor_view as
+SELECT 
+    emp_id,
+    auth_id, 
+    lab_id,
+    name,
+    email,
+    office,
+    phone,
+    active,
+    status_eff_date,
+    sys_admin_flag,
+    lab_dir_flag,
+    exec_dir_flag,
+    chairperson_flag
+FROM F15D5_Emp where emp_id IN (SELECT F15D5_emp_emp_id FROM F15D5_RFE);
+
 create view F15D5Lab_Dir_view as
 SELECT 
     emp_id,
@@ -19,13 +36,13 @@ SELECT
     lab_dir_flag,
     exec_dir_flag,
     chairperson_flag
-FROM F15D5Employee where lab_dir_flag = TRUE ;
+FROM F15D5_Emp where lab_dir_flag = TRUE ;
 
 create or replace TRIGGER F15D5Lab_Dir_view
      INSTEAD OF insert ON F15D5Lab_Dir_view
      FOR EACH ROW
 BEGIN
-    insert into F15D5Employee( 
+    insert into F15D5_Emp( 
         emp_id,
         auth_id, 
         lab_id,
@@ -71,13 +88,13 @@ SELECT
     lab_dir_flag,
     exec_dir_flag,
     chairperson_flag
-FROM F15D5Employee where sys_admin_flag = true ;
+FROM F15D5_Emp where sys_admin_flag = true ;
 
 create or replace TRIGGER F15D5Lab_Sys_Admin_view
      INSTEAD OF insert ON F15D5Lab_Sys_Admin_view
      FOR EACH ROW
 BEGIN
-    insert into F15D5Employee( 
+    insert into F15D5_Emp( 
         emp_id,
         auth_id, 
         lab_id,
@@ -123,13 +140,13 @@ SELECT
     lab_dir_flag,
     exec_dir_flag,
     chairperson_flag
-FROM F15D5Employee where chairperson_flag = true ;
+FROM F15D5_Emp where chairperson_flag = true ;
 
 create or replace TRIGGER F15D5Chairperson_trigger
      INSTEAD OF insert ON F15D5Chairperson_view
      FOR EACH ROW
 BEGIN
-    insert into F15D5Employee( 
+    insert into F15D5_Emp( 
         emp_id,
         auth_id, 
         lab_id,
@@ -175,13 +192,13 @@ SELECT
     lab_dir_flag,
     exec_dir_flag,
     chairperson_flag
-FROM F15D5Employee where exec_dir_flag = true ;
+FROM F15D5_Emp where exec_dir_flag = true ;
 
 create or replace TRIGGER F15D5Exec_Dir_trigger
      INSTEAD OF insert ON F15D5Exec_Dir_view
      FOR EACH ROW
 BEGIN
-    insert into F15D5Employee( 
+    insert into F15D5_Emp( 
         emp_id,
         auth_id, 
         lab_id,
