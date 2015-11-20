@@ -6,8 +6,7 @@ drop view F15D5Exec_Dir_view ;
 
 create view F15D5Requestor_view as
 SELECT 
-    emp_id,
-    F15D5_Auth_auth_id, 
+    emp_id, 
     F15D5_Lab_lab_id,
     name,
     email,
@@ -18,13 +17,13 @@ SELECT
     sys_admin_flag,
     lab_dir_flag,
     exec_dir_flag,
-    chairperson_flag
+    chairperson_flag,
+    F15D5_Auth_auth_id
 FROM F15D5_emp where emp_id IN (SELECT F15D5_emp_emp_id FROM F15D5_RFE);
 
 create view F15D5Lab_Dir_view as
 SELECT 
     emp_id,
-    F15D5_Auth_auth_id, 
     F15D5_Lab_lab_id,
     name,
     email,
@@ -35,7 +34,8 @@ SELECT
     sys_admin_flag,
     lab_dir_flag,
     exec_dir_flag,
-    chairperson_flag
+    chairperson_flag,
+    F15D5_Auth_auth_id
 FROM F15D5_emp where lab_dir_flag = 'Y' ;
 
 create or replace TRIGGER F15D5Lab_Dir_view
@@ -43,8 +43,7 @@ create or replace TRIGGER F15D5Lab_Dir_view
      FOR EACH ROW
 BEGIN
     insert into F15D5_emp( 
-        emp_id,
-        F15D5_Auth_auth_id, 
+        emp_id, 
         F15D5_Lab_lab_id,
         name,
         email,
@@ -55,10 +54,10 @@ BEGIN
         sys_admin_flag,
         lab_dir_flag,
         exec_dir_flag,
-        chairperson_flag)
+        chairperson_flag,
+        F15D5_Auth_auth_id)
     VALUES ( 
         :NEW.employee_id,
-        :NEW.F15D5_Auth_auth_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -69,14 +68,14 @@ BEGIN
         'N',
         'Y',
         'N',
-        'N') ;
+        'N',
+        :NEW.F15D5_Auth_auth_id,) ;
 END;
 /
 
 create view F15D5Lab_Sys_Admin_view as
 SELECT 
     emp_id,
-    F15D5_Auth_auth_id, 
     F15D5_Lab_lab_id,
     name,
     email,
@@ -87,7 +86,8 @@ SELECT
     sys_admin_flag,
     lab_dir_flag,
     exec_dir_flag,
-    chairperson_flag
+    chairperson_flag,
+    F15D5_Auth_auth_id 
 FROM F15D5_emp where sys_admin_flag = 'Y' ;
 
 create or replace TRIGGER F15D5Lab_Sys_Admin_view
@@ -96,7 +96,6 @@ create or replace TRIGGER F15D5Lab_Sys_Admin_view
 BEGIN
     insert into F15D5_emp( 
         emp_id,
-        F15D5_Auth_auth_id, 
         F15D5_Lab_lab_id,
         name,
         email,
@@ -107,10 +106,10 @@ BEGIN
         sys_admin_flag,
         lab_dir_flag,
         exec_dir_flag,
-        chairperson_flag)
+        chairperson_flag,
+        F15D5_Auth_auth_id)
     VALUES ( 
         :NEW.employee_id,
-        :NEW.F15D5_Auth_auth_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -121,14 +120,14 @@ BEGIN
         'Y',
         'N',
         'N',
-        'N') ;
+        'N',
+        :NEW.F15D5_Auth_auth_id) ;
 END;
 /
 
 create view F15D5Chairperson_view as
 SELECT 
-    emp_id,
-    F15D5_Auth_auth_id, 
+    emp_id, 
     F15D5_Lab_lab_id,
     name,
     email,
@@ -139,7 +138,8 @@ SELECT
     sys_admin_flag,
     lab_dir_flag,
     exec_dir_flag,
-    chairperson_flag
+    chairperson_flag,
+    F15D5_Auth_auth_id
 FROM F15D5_emp where chairperson_flag = 'Y' ;
 
 create or replace TRIGGER F15D5Chairperson_trigger
@@ -148,7 +148,6 @@ create or replace TRIGGER F15D5Chairperson_trigger
 BEGIN
     insert into F15D5_emp( 
         emp_id,
-        F15D5_Auth_auth_id, 
         F15D5_Lab_lab_id,
         name,
         email,
@@ -159,10 +158,10 @@ BEGIN
         sys_admin_flag,
         lab_dir_flag,
         exec_dir_flag,
-        chairperson_flag)
+        chairperson_flag,
+        F15D5_Auth_auth_id)
     VALUES ( 
         :NEW.employee_id,
-        :NEW.F15D5_Auth_auth_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -173,14 +172,14 @@ BEGIN
         'N',
         'N',
         'N',
-        'Y') ;
+        'Y',
+        :NEW.F15D5_Auth_auth_id) ;
 END;
 /
 
 create view F15D5Exec_Dir_view as
 SELECT 
-    emp_id,
-    F15D5_Auth_auth_id, 
+    emp_id, 
     F15D5_Lab_lab_id,
     name,
     email,
@@ -191,7 +190,8 @@ SELECT
     sys_admin_flag,
     lab_dir_flag,
     exec_dir_flag,
-    chairperson_flag
+    chairperson_flag,
+    F15D5_Auth_auth_id
 FROM F15D5_emp where exec_dir_flag = 'Y';
 
 create or replace TRIGGER F15D5Exec_Dir_trigger
@@ -200,7 +200,6 @@ create or replace TRIGGER F15D5Exec_Dir_trigger
 BEGIN
     insert into F15D5_emp( 
         emp_id,
-        F15D5_Auth_auth_id, 
         F15D5_Lab_lab_id,
         name,
         email,
@@ -211,10 +210,10 @@ BEGIN
         sys_admin_flag,
         lab_dir_flag,
         exec_dir_flag,
-        chairperson_flag)
+        chairperson_flag,
+        F15D5_Auth_auth_id)
     VALUES ( 
         :NEW.employee_id,
-        :NEW.F15D5_Auth_auth_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -225,7 +224,8 @@ BEGIN
         'N',
         'N',
         'Y',
-        'N') ;
+        'N',
+        :NEW.F15D5_Auth_auth_id) ;
 END;
 /
 

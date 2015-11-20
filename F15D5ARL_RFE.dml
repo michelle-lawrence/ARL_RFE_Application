@@ -1,17 +1,17 @@
-truncate table F15D5_Doc
-truncate table F15D5_Status
-truncate table F15D5_StatHis
-truncate table F15D5_RFE
-truncate table F15D5_Comments
-truncate table F15D5_Task
-truncate table RFE_Task_Relation
-truncate table approvers
-truncate table contact
-truncate table F15D5_Lab
-truncate table F15D5_emp
-truncate table F15D5_Auth
-truncate table role
-truncate table F15D5Role_Codes
+truncate table F15D5_Doc;
+truncate table F15D5_Status;
+truncate table F15D5_StatHis;
+truncate table F15D5_RFE;
+truncate table F15D5_Comments;
+truncate table F15D5_Task;
+truncate table r4;
+truncate table approvers;
+truncate table contact;
+truncate table F15D5_Lab;
+truncate table F15D5_emp;
+truncate table F15D5_Auth;
+truncate table role;
+truncate table F15D5Role_Codes;
 
 alter trigger F15D5Role_Codes_PK_trig disable;
 alter trigger F15D5_Auth_PK_trig disable;
@@ -29,76 +29,67 @@ alter trigger r4_PK_trig disable;
 alter trigger role_PK_trig disable;
 
 --Labs--
-INSERT INTO F15D5_Lab VALUES
-(1, "Sato Worldwide");
-INSERT INTO F15D5_Lab VALUES
-(2, "Star Labs");
-INSERT INTO F15D5_Lab VALUES
-(3, "Dexter's Lab");
-INSERT INTO F15D5_Lab VALUES
-(4, "T.A.R.D.I.S.");
-INSERT INTO F15D5_Lab VALUES
-(5, "Serenity");
-INSERT INTO F15D5_Lab VALUES
-(6, "Auth Lab");
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (1, 'Sato');
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (2, 'Star');
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (3, 'Dext');
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (4, 'TARD');
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (5, 'SERE');
+INSERT INTO F15D5_Lab (lab_id, lab_name) VALUES (6, 'Auth');
 
 --Auth--
-INSERT INTO F15D5_Auth VALUES
-(1, "view");
-INSERT INTO F15D5_Auth VALUES
-(2, "edit");
-INSERT INTO F15D5_Auth VALUES
-(3, "none");
+INSERT INTO F15D5_Auth (auth_id, right) VALUES (1, 'view');
+INSERT INTO F15D5_Auth (auth_id, right) VALUES (2, 'edit');
+INSERT INTO F15D5_Auth (auth_id, right) VALUES (3, 'none');
 
 --Employees--
-INSERT INTO F15D5_emp VALUES
-(1, 2, 6, "The Doctor", "iheartrose@gmail.com", "T.A.R.D.I.S.", "1-800-SEXY", 'Y', SYSDATE, 'N', 'N', 'N', 'Y');
-INSERT INTO F15D5_emp VALUES
-(2, 2, 6, "Dumbledore", "lemondrops@gmail.com", "Hogwarts", "1-800-MAGIC", 'Y', SYSDATE, 'N', 'N', 'Y', 'N');
-INSERT INTO F15D5_emp VALUES
-(3, 2, 1, "Captain Mal", "browncoat@gmail.com", "Serenity", "1-800-TAKE-MY-LAND", 'Y', SYSDATE, 'Y', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(4, 2, 1, "Sokka", "theMoonMan@gmail.com", "Southern Water Temple", "1-800-METEOR-SWORD", 'Y', SYSDATE, 'N', 'Y', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(5, 2, 2, "Yoda", "DoOrDoNot@gmail.com", "Tatooine", "1-800-THE-FORCE", 'Y', SYSDATE, 'Y', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(6, 2, 2, "Sherlock Holmes", "BORED@gmail.com", "221b Baker Street", "1-800-SHERLOCKED", 'Y', SYSDATE, 'N', 'Y', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(7, 2, 3, "Wash", "sudden_but_inevitable_betrayal@gmail.com", "Serenity.", "1-800-LEAF-ON-WIND", 'Y', SYSDATE, 'Y', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(8, 2, 3, "Benedict Cumberbatch", "not_sherlock@gmail.com", "My heart", "1-800-BENNY", 'Y', SYSDATE, 'N', 'Y', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(9, 2, 4, "Batman", "bruce.wayne@gmail.com", "bat cave", "1-800-ANGST", 'Y', SYSDATE, 'Y', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(10, 2, 4, "Harry Potter", "the_boy_who_lived@gmail.com", "The closet under the stairs", "1-800-BADASS", 'Y', SYSDATE, 'N', 'Y', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(11, 2, 5, "Korra", "im_the_avatar_deal_with_it@gmail.com", "capitol city", "1-800-FIRE-FERRETS", 'Y', SYSDATE, 'Y', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(12, 2, 5, "Catzzzzzzz", "tuna@gmail.com", "DA KARDBARD BOX", "1-800-CHEEZEBURGER", 'Y', SYSDATE, 'N', 'Y', 'N', 'N');
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(1, 6, 'The Doctor', 'iheartrose@gmail.com', 'T.A.R.D.I.S.', '1-SEXY', 'Y', SYSDATE, 'N', 'N', 'N', 'Y', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(2, 6, 'Dumbledore', 'lemondrops@gmail.com', 'Hogwarts', '1-MAGIC', 'Y', SYSDATE, 'N', 'N', 'Y', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(3, 1, 'Captain Mal', 'browncoat@gmail.com', 'Serenity', '113-LAND', 'Y', SYSDATE, 'Y', 'N', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(4, 1, 'Sokka', 'theMoonMan@gmail.com', 'Cantaloupe', '55-SWORD', 'Y', SYSDATE, 'N', 'Y', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(5, 2, 'Yoda', 'DoOrDoNot@gmail.com', 'Tatooine', '21-FORCE', 'Y', SYSDATE, 'Y', 'N', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(6, 2, 'Sherlock Holmes', 'BORED@gmail.com', 'Mind palace', '999-SHER', 'Y', SYSDATE, 'N', 'Y', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(7, 3, 'Wash', 'inevitable_betrayal@gmail.com', 'Serenity.', '337-WIND', 'Y', SYSDATE, 'Y', 'N', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(8, 3, 'Benedict Cumberbatch', 'not_sherlock@gmail.com', 'My heart', '907-BENY', 'Y', SYSDATE, 'N', 'Y', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(9, 4, 'Batman', 'bruce.wayne@gmail.com', 'bat cave', '10-ANGST', 'Y', SYSDATE, 'Y', 'N', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(10, 4, 'Harry Potter', 'the_boy_who_lived@gmail.com', 'Hogwarts', '800-BOYZ', 'Y', SYSDATE, 'N', 'Y', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(11, 5, 'Korra', 'deal_with_it@gmail.com', 'capitol', '866-FIRE', 'Y', SYSDATE, 'Y', 'N', 'N', 'N', 2);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(12, 5, 'Catzzzzzzz', 'tuna@gmail.com', 'BOX', '800-CHEZ', 'Y', SYSDATE, 'N', 'Y', 'N', 'N', 2);
 
-INSERT INTO F15D5_emp VALUES
-(13, 3, 1, "Rose", "iheartthedoctor@gmail.com", "T.A.R.D.I.S.", "1-800-GOODBYE", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(14, 3, 2, "Legolas", "elf_eyes64@gmail.com", "Lothlorien", "1-800-ARROWS", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(15, 3, 3, "Totoro", "trees_are_nice@gmail.com", "The Spirit World", "1-800-MIYAZAKI", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(16, 3, 4, "Bolin", "lava_bender@gmail.com", "capitol city", "1-800-BOLIN-MAKES-ME-LOL", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(17, 3, 5, "Wonder Woman", "the_whip@gmail.com", "Paradise Island", "1-800-DIANA-PRINCE", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
-INSERT INTO F15D5_emp VALUES
-(18, 3, 1, "Frodo Baggins", "the_ring_bearer@gmail.com", "The Shire", "1-800-MY-PRECIOUS", 'Y', SYSDATE, 'N', 'N', 'N', 'N');
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(13, 1, 'Rose', 'iheartthedoctor@gmail.com', 'T.A.R.D.I.S.', '1GOODBYE', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(14, 2, 'Legolas', 'elf_eyes64@gmail.com', 'Lothlorien', '1-ARROW', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(15, 3, 'Totoro', 'trees_are_nice@gmail.com', 'Spirit', '221GIBLI', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(16, 4, 'Bolin', 'lava_bender@gmail.com', 'capitol', '885-LOLZ', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(17, 5, 'Wonder Woman', 'the_whip@gmail.com', 'Paradise', '784-DIAN', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
+INSERT INTO F15D5_emp (emp_id, F15D5_Lab_lab_id, name, email, office, phone, active, status_eff_date, sys_admin_flag, lab_dir_flag, exec_dir_flag, chairperson_flag, F15D5_Auth_auth_id) VALUES
+(18, 1, 'Frodo Baggins', 'the_ring_bearer@gmail.com', 'The Shire', 'PRECIOUS', 'Y', SYSDATE, 'N', 'N', 'N', 'N', 3);
 
-INSERT INTO F15D5_Task VALUES
-(1, SYSDATE, "Watch Me Whip", "See Task 2");
-INSERT INTO F15D5_Task VALUES
-(2, SYSDATE, "Watch Me Nae Nae", "Ooh watch me, watch me/Ooh watch me, watch me/Ooh watch me, watch me/Ooh ooh ooh ooh");
-INSERT INTO F15D5_Task VALUES
-(3 SYSDATE, "Make Tasty Chocolates", "Open up a cookbook. It’s all in there.");
-INSERT INTO F15D5_Task VALUES
-(4, SYSDATE, "Whip It Good", "duh nuh nuh nuh nuh nuh nuh nuh");
-INSERT INTO F15D5_Task VALUES
-(5, SYSDATE, "Defeat the Huns", "Step 1: Get down to business. Step 2: Be swift as a coursing river. Step 3: Have all the force of a great typhoon.");
+INSERT INTO F15D5_Task (task_id, effective_date, task_abbrev, task_description) VALUES
+(1, SYSDATE, 'Watch Me Whip', 'See Task 2');
+INSERT INTO F15D5_Task (task_id, effective_date, task_abbrev, task_description) VALUES
+(2, SYSDATE, 'Nae Nae', 'Ooh watch me, watch me');
+INSERT INTO F15D5_Task (task_id, effective_date, task_abbrev, task_description) VALUES
+(3, SYSDATE, 'Make Cocoa', 'Open up a cookbook.');
+INSERT INTO F15D5_Task (task_id, effective_date, task_abbrev, task_description) VALUES
+(4, SYSDATE, 'Whip It', 'duh nuh nuh nuh');
+INSERT INTO F15D5_Task (task_id, effective_date, task_abbrev, task_description) VALUES
+(5, SYSDATE, 'Defeat Huns', 'Step 1: Get down to business.');
 
 alter trigger F15D5Role_Codes_PK_trig enable;
 alter trigger F15D5_Auth_PK_trig enable;
@@ -114,4 +105,3 @@ alter trigger approvers_PK_trig enable;
 alter trigger contact_PK_trig enable;
 alter trigger r4_PK_trig enable;
 alter trigger role_PK_trig enable;
-
