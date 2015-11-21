@@ -240,6 +240,48 @@ BEGIN
 END;
 /
 
+DROP SEQUENCE approver_seq;
+CREATE SEQUENCE approver_seq;
+CREATE OR REPLACE TRIGGER insert_approvers
+  AFTER INSERT OR UPDATE ON F15D5_RFE
+  FOR EACH ROW
+  DECLARE
+    sys_admin NUMBER;
+    lab_dir NUMBER;
+    exec_dir NUMBER;
+    chair NUMBER;
+    lab NUMBER;
+BEGIN
+    --Chairperson--
+    SELECT emp_id INTO chair FROM F15D5_emp
+    WHERE chairperson_flag = 'Y';
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    (approver_seq.NEXTVAL, :new.rfe_id, chair);
+
+    --Executive Director--
+    SELECT emp_id INTO exec_dir FROM F15D5_emp
+    WHERE exec_dir_flag = 'Y';
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    (approver_seq.NEXTVAL, :new.rfe_id, exec_dir);
+
+    --System Administrator--
+    SELECT F15D5_Lab_lab_id INTO lab FROM F15D5_emp WHERE emp_id = :new.F15D5_emp_emp_id;
+    SELECT emp_id INTO sys_admin FROM F15D5_emp
+    WHERE sys_admin_flag = 'Y' AND F15D5_Lab_lab_id = lab;
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    (approver_seq.NEXTVAL, :new.rfe_id, sys_admin);
+
+    --Lab Director--
+    SELECT emp_id INTO lab_dir FROM F15D5_emp
+    WHERE lab_dir_flag = 'Y' AND F15D5_Lab_lab_id = lab; 
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    (approver_seq.NEXTVAL, :new.rfe_id, lab_dir);
+
+END;
+/
+
+
+
 DROP SEQUENCE blurb_id_seq;
 CREATE SEQUENCE blurb_id_seq;
 CREATE OR REPLACE TRIGGER add_new_comment
