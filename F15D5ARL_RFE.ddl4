@@ -1,6 +1,6 @@
 drop view F15D5Requestor_view ;
 drop view F15D5Lab_Dir_view ;
-drop view F15D5System_Admin_view ;
+drop view F15D5Sys_Admin_view ;
 drop view F15D5Chairperson_view ;
 drop view F15D5Exec_Dir_view ;
 
@@ -57,7 +57,7 @@ BEGIN
         chairperson_flag,
         F15D5_Auth_auth_id)
     VALUES ( 
-        :NEW.employee_id,
+        :NEW.emp_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -69,11 +69,11 @@ BEGIN
         'Y',
         'N',
         'N',
-        :NEW.F15D5_Auth_auth_id,) ;
+        :NEW.F15D5_Auth_auth_id) ;
 END;
 /
 
-create view F15D5Lab_Sys_Admin_view as
+create view F15D5Sys_Admin_view as
 SELECT 
     emp_id,
     F15D5_Lab_lab_id,
@@ -90,8 +90,8 @@ SELECT
     F15D5_Auth_auth_id 
 FROM F15D5_emp where sys_admin_flag = 'Y' ;
 
-create or replace TRIGGER F15D5Lab_Sys_Admin_view
-     INSTEAD OF insert ON F15D5Lab_Sys_Admin_view
+create or replace TRIGGER F15D5Sys_Admin_view
+     INSTEAD OF insert ON F15D5Sys_Admin_view
      FOR EACH ROW
 BEGIN
     insert into F15D5_emp( 
@@ -109,7 +109,7 @@ BEGIN
         chairperson_flag,
         F15D5_Auth_auth_id)
     VALUES ( 
-        :NEW.employee_id,
+        :NEW.emp_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -161,7 +161,7 @@ BEGIN
         chairperson_flag,
         F15D5_Auth_auth_id)
     VALUES ( 
-        :NEW.employee_id,
+        :NEW.emp_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -213,7 +213,7 @@ BEGIN
         chairperson_flag,
         F15D5_Auth_auth_id)
     VALUES ( 
-        :NEW.employee_id,
+        :NEW.emp_id,
         :NEW.F15D5_Lab_lab_id,
         :NEW.name,
         :NEW.email,
@@ -229,37 +229,44 @@ BEGIN
 END;
 /
 
+DROP SEQUENCE hist_id_seq;
+CREATE SEQUENCE hist_id_seq;
 CREATE OR REPLACE TRIGGER update_status_history
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
 BEGIN
     INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
-    (hist_id.NEXTVAL, :new.rfe_id, :new.status_id, SYSDATE, v('P3_PERSON_CHANGED'));
+    (hist_id_seq.NEXTVAL, :new.rfe_id, :new.F15D5_Status_status_id, SYSDATE, v('P3_PERSON_CHANGED'));
 END;
 /
 
+DROP SEQUENCE blurb_id_seq;
+CREATE SEQUENCE blurb_id_seq;
 CREATE OR REPLACE TRIGGER add_new_comment
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
 BEGIN
     INSERT INTO F15D5_Comments (comment_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id, entry_date, comments) VALUES
-    (comment_id.NEXTVAL, :new.rfe_id, v('P3_PERSON_CHANGED'), SYSDATE, v('P3_COMMENT_BOX'));
+    (blurb_id_seq.NEXTVAL, :new.rfe_id, v('P3_PERSON_CHANGED'), SYSDATE, v('P3_COMMENT_BOX'));
 END;
 /
 
 CREATE OR REPLACE TRIGGER employees_before_update
 BEFORE UPDATE ON F15D5_emp
 FOR EACH ROW
+DECLARE
+  dir_count NUMBER;
+  chair_count NUMBER;
 BEGIN
-  SELECT COUNT(*) as dir_count FROM F15D5_emp
-  WHERE exec_dir_flag = true
+  SELECT COUNT(*) INTO dir_count FROM F15D5_emp
+  WHERE exec_dir_flag = 'Y'
   GROUP BY emp_id;
   IF dir_count >= 1 THEN
         RAISE_APPLICATION_ERROR(-2001, 'There cannot be more than one Executive Director.');
   END IF;
 
-  SELECT COUNT(*) as chair_count FROM F15D5_emp
-  WHERE chairperson_flag = true
+  SELECT COUNT(*) INTO chair_count FROM F15D5_emp
+  WHERE chairperson_flag = 'Y'
   GROUP BY emp_id;
   IF chair_count >= 1 THEN
         RAISE_APPLICATION_ERROR(-2001, 'There cannot be more than one Chairperson.');
