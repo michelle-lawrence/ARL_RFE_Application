@@ -240,6 +240,15 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE TRIGGER update_requestor_id
+  AFTER INSERT ON F15D5_RFE
+  FOR EACH ROW
+BEGIN
+    UPDATE F15D5_RFE
+    SET F15D5_emp_emp_id = v('P3_PERSON_CHANGED');
+END;
+/
+
 DROP SEQUENCE blurb_id_seq;
 CREATE SEQUENCE blurb_id_seq;
 CREATE OR REPLACE TRIGGER add_new_comment
@@ -273,6 +282,8 @@ BEGIN
   END IF;
 END;
 /
+
+
 
 
 
