@@ -260,6 +260,16 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE TRIGGER delete_rfe_children
+  AFTER DELETE ON F15D5_RFE
+  FOR EACH ROW
+BEGIN
+    DELETE FROM F15D5_Comments where F15D5_RFE_rfe_id = :old.rfe_id;
+    INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
+    (hist_id_seq.NEXTVAL, :new.rfe_id, 'Deleted', SYSDATE, v('P3_PERSON_CHANGED'));
+END;
+/
+
 CREATE OR REPLACE TRIGGER employees_before_update
 BEFORE UPDATE ON F15D5_emp
 FOR EACH ROW
