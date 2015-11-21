@@ -233,7 +233,7 @@ CREATE OR REPLACE TRIGGER update_status_history
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
 BEGIN
-    INSERT INTO F15D5_StatHis VALUES
+    INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
     (hist_id.NEXTVAL, :new.rfe_id, :new.status_id, SYSDATE, v('P3_PERSON_CHANGED'));
 END;
 /
@@ -242,7 +242,7 @@ CREATE OR REPLACE TRIGGER add_new_comment
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
 BEGIN
-    INSERT INTO F15D5_Comments VALUES
+    INSERT INTO F15D5_Comments (comment_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id, entry_date, comments) VALUES
     (comment_id.NEXTVAL, :new.rfe_id, v('P3_PERSON_CHANGED'), SYSDATE, v('P3_COMMENT_BOX'));
 END;
 /
