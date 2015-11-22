@@ -255,28 +255,31 @@ BEGIN
     --Chairperson--
     SELECT emp_id INTO chair FROM F15D5_emp
     WHERE chairperson_flag = 'Y';
-    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
     (approver_seq.NEXTVAL, :new.rfe_id, chair);
 
     --Executive Director--
     SELECT emp_id INTO exec_dir FROM F15D5_emp
     WHERE exec_dir_flag = 'Y';
-    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
     (approver_seq.NEXTVAL, :new.rfe_id, exec_dir);
 
-    --System Administrator--
+
     SELECT F15D5_Lab_lab_id INTO lab FROM F15D5_emp WHERE emp_id = :new.F15D5_emp_emp_id;
-    SELECT emp_id INTO sys_admin FROM F15D5_emp
-    WHERE sys_admin_flag = 'Y' AND F15D5_Lab_lab_id = lab;
-    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
-    (approver_seq.NEXTVAL, :new.rfe_id, sys_admin);
-
-    --Lab Director--
-    SELECT emp_id INTO lab_dir FROM F15D5_emp
-    WHERE lab_dir_flag = 'Y' AND F15D5_Lab_lab_id = lab; 
-    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
-    (approver_seq.NEXTVAL, :new.rfe_id, lab_dir);
-
+    
+    IF lab != 6 THEN
+      --System Administrator--
+      SELECT emp_id INTO sys_admin FROM F15D5_emp
+      WHERE sys_admin_flag = 'Y' AND F15D5_Lab_lab_id = lab;
+      INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+      (approver_seq.NEXTVAL, :new.rfe_id, sys_admin);
+  
+      --Lab Director--
+      SELECT emp_id INTO lab_dir FROM F15D5_emp
+      WHERE lab_dir_flag = 'Y' AND F15D5_Lab_lab_id = lab; 
+      INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+      (approver_seq.NEXTVAL, :new.rfe_id, lab_dir);
+    END IF;
 END;
 /
 
@@ -299,6 +302,7 @@ CREATE OR REPLACE TRIGGER delete_rfe_children
 BEGIN
     DELETE FROM F15D5_Comments where F15D5_RFE_rfe_id = :old.rfe_id;
     DELETE FROM F15D5_StatHis where F15D5_RFE_rfe_id = :old.rfe_id;
+    DELETE FROM approvers where F15D5_RFE_rfe_id = :old.rfe_id;
 END;
 /
 
