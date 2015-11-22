@@ -228,20 +228,10 @@ BEGIN
         :NEW.F15D5_Auth_auth_id) ;
 END;
 /
-
-DROP SEQUENCE hist_id_seq;
-CREATE SEQUENCE hist_id_seq;
-CREATE OR REPLACE TRIGGER update_status_history
-  AFTER INSERT OR UPDATE ON F15D5_RFE
-  FOR EACH ROW
-BEGIN
-    INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
-    (hist_id_seq.NEXTVAL, :new.rfe_id, :new.F15D5_Status_status_id, SYSDATE, v('P3_PERSON_CHANGED'));
-END;
-/
-
 DROP SEQUENCE approver_seq;
 CREATE SEQUENCE approver_seq;
+DROP SEQUENCE hist_id_seq;
+CREATE SEQUENCE hist_id_seq;
 CREATE OR REPLACE TRIGGER insert_approvers
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
@@ -252,47 +242,35 @@ CREATE OR REPLACE TRIGGER insert_approvers
     chair NUMBER;
     lab NUMBER;
 BEGIN
-    --Chairperson--
+    INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
+    (hist_id_seq.NEXTVAL, :new.rfe_id, :new.F15D5_Status_status_id, SYSDATE, v('P3_PERSON_CHANGED'));
+    
     SELECT emp_id INTO chair FROM F15D5_emp
     WHERE chairperson_flag = 'Y';
-    INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
     (approver_seq.NEXTVAL, :new.rfe_id, chair);
 
     --Executive Director--
     SELECT emp_id INTO exec_dir FROM F15D5_emp
     WHERE exec_dir_flag = 'Y';
-    INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+    INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
     (approver_seq.NEXTVAL, :new.rfe_id, exec_dir);
-
-
+    
     SELECT F15D5_Lab_lab_id INTO lab FROM F15D5_emp WHERE emp_id = :new.F15D5_emp_emp_id;
     
     IF lab != 6 THEN
       --System Administrator--
       SELECT emp_id INTO sys_admin FROM F15D5_emp
       WHERE sys_admin_flag = 'Y' AND F15D5_Lab_lab_id = lab;
-      INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+      INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
       (approver_seq.NEXTVAL, :new.rfe_id, sys_admin);
   
       --Lab Director--
       SELECT emp_id INTO lab_dir FROM F15D5_emp
       WHERE lab_dir_flag = 'Y' AND F15D5_Lab_lab_id = lab; 
-      INSERT INTO approvers (approver_id.NEXTVAL, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
+      INSERT INTO approvers (approver_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id) VALUES
       (approver_seq.NEXTVAL, :new.rfe_id, lab_dir);
     END IF;
-END;
-/
-
-
-
-DROP SEQUENCE blurb_id_seq;
-CREATE SEQUENCE blurb_id_seq;
-CREATE OR REPLACE TRIGGER add_new_comment
-  AFTER INSERT OR UPDATE ON F15D5_RFE
-  FOR EACH ROW
-BEGIN
-    INSERT INTO F15D5_Comments (comment_id, F15D5_RFE_rfe_id, F15D5_emp_emp_id, entry_date, comments) VALUES
-    (blurb_id_seq.NEXTVAL, :new.rfe_id, v('P3_PERSON_CHANGED'), SYSDATE, v('P3_COMMENT_BOX'));
 END;
 /
 
