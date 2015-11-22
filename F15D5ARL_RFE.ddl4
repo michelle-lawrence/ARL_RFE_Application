@@ -337,6 +337,7 @@ BEFORE INSERT OR UPDATE ON contact
 FOR EACH ROW
 BEGIN
     :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
+    :NEW.contact_role_code := 2;
 END;
 /
 
