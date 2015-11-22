@@ -321,10 +321,19 @@ FOR EACH ROW
 BEGIN
     :NEW.F15D5_emp_emp_id := v('P3_PERSON_CHANGED');
     :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
+    :NEW.entry_date := SYSDATE; 
 END;
 /
 CREATE OR REPLACE TRIGGER insert_doc_info
 BEFORE INSERT OR UPDATE ON F15D5_Doc
+FOR EACH ROW
+BEGIN
+    :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
+END;
+/
+
+CREATE OR REPLACE TRIGGER insert_contact_info
+BEFORE INSERT OR UPDATE ON contact
 FOR EACH ROW
 BEGIN
     :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
