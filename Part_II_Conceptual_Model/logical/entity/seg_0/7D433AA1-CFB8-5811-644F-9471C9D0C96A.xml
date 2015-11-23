@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7D433AA1-CFB8-5811-644F-9471C9D0C96A" name="Drinks">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:34:50 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="drink_no" id="1DE43847-BB77-CFB0-F0AE-6EA7F40ABCCD">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:34:57 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="1989C02F-DD47-8147-EDB7-1882F9A36C18">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:08 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ingredients" id="009723EA-57F7-0BC9-BC7D-491129837F1B">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:23 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="calories" id="9EC26086-D723-021D-A015-8E879E12D268">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:33 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cost" id="5F4F2A61-ADCB-03C8-EEAB-2BD56D8F41FE">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:41 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="img_filename" id="5A59CA35-30F7-8EE1-DEB2-7A38A351BF9D">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:48 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="DA887586-EB7D-7592-91A0-7769FEBBC9CA">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:36:06 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="directions" id="D15196CB-FF44-77A7-757D-EC0365E03531">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:36:17 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="alcoholic" id="0F230540-DA3A-EB62-41E7-435F9395791F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:36:32 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="season_no" id="8D82B98A-D5D0-9331-A3FF-52060D8B2DFC">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:39:06 UTC</createdTime>
+<generatorID>9F12ECD3-D6AB-355E-B8F3-5DD4C28462D7</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E4A05DA9-E833-9E67-5391-A12D0263ABC2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4029542-7746-7FFF-EF01-362E3922D2E9" name="Drinks PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:35:07 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1DE43847-BB77-CFB0-F0AE-6EA7F40ABCCD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

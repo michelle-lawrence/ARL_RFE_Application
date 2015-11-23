@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="7D433AA1-CFB8-5811-644F-9471C9D0C96A" name="Drinks" seqName="seg_0"/>
+   <object objectType="Entity" objectID="5D105562-50EF-2E8C-25EC-8489C226E666" name="Season" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9F12ECD3-D6AB-355E-B8F3-5DD4C28462D7" name="Relation_1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

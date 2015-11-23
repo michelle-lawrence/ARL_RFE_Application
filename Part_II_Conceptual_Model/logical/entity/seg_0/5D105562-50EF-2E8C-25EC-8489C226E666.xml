@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5D105562-50EF-2E8C-25EC-8489C226E666" name="Season">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:37:37 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="season_no" id="E4A05DA9-E833-9E67-5391-A12D0263ABC2">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:37:42 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="10236F91-9281-F812-44F2-032B9B784ED5">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:38:06 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="start_date" id="5AFD7068-FC02-7319-5C5F-4A07E06488B7">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:37:53 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="end_date" id="6E9EDF76-AA97-E201-D298-64AA9530E3A9">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:38:01 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="avg_high_temp" id="5ADC3C80-B6ED-4C39-591F-64DFC3400A67">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:38:26 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="avg_low_temp" id="BE44377B-830E-01B3-E251-909AF16482BC">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:38:42 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B92EF9D0-2E1B-9B6B-0FE6-5B0987E2C6BA" name="Season PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:37:52 UTC</createdTime>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<engineerTo>
+<item key="2BA6EC10-B64D-5096-B1C9-6014E469B02B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E4A05DA9-E833-9E67-5391-A12D0263ABC2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
