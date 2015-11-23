@@ -232,6 +232,8 @@ DROP SEQUENCE approver_seq;
 CREATE SEQUENCE approver_seq;
 DROP SEQUENCE hist_id_seq;
 CREATE SEQUENCE hist_id_seq;
+DROP SEQUENCE task_seq;
+CREATE SEQUENCE task_seq;
 CREATE OR REPLACE TRIGGER insert_approvers
   AFTER INSERT OR UPDATE ON F15D5_RFE
   FOR EACH ROW
@@ -244,6 +246,9 @@ CREATE OR REPLACE TRIGGER insert_approvers
 BEGIN
     INSERT INTO F15D5_StatHis (hist_id, F15D5_RFE_rfe_id, status_code, effective_date, F15D5_emp_emp_id) VALUES
     (hist_id_seq.NEXTVAL, :new.rfe_id, :new.F15D5_Status_status_id, SYSDATE, v('P3_PERSON_CHANGED'));
+
+    INSERT INTO r4 (F15D5_Task_task_id, F15D5_RFE_rfe_id, rfetask_relation_id) VALUES
+    (v('P8_TASK'), :new.rfe_id, task_seq.NEXTVAL);
     
     SELECT emp_id INTO chair FROM F15D5_emp
     WHERE chairperson_flag = 'Y';
@@ -281,6 +286,9 @@ BEGIN
     DELETE FROM F15D5_Comments where F15D5_RFE_rfe_id = :old.rfe_id;
     DELETE FROM F15D5_StatHis where F15D5_RFE_rfe_id = :old.rfe_id;
     DELETE FROM approvers where F15D5_RFE_rfe_id = :old.rfe_id;
+    DELETE FROM F15D5_Doc where F15D5_RFE_rfe_id = :old.rfe_id;
+    DELETE FROM contact where F15D5_RFE_rfe_id = :old.rfe_id;
+
 END;
 /
 
@@ -338,6 +346,14 @@ FOR EACH ROW
 BEGIN
     :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
     :NEW.contact_role_code := 2;
+END;
+/
+
+CREATE OR REPLACE TRIGGER insert_task_info
+BEFORE INSERT OR UPDATE ON r4
+FOR EACH ROW
+BEGIN
+    :NEW.F15D5_RFE_rfe_id := v('RFE_ID_LINK');
 END;
 /
 
