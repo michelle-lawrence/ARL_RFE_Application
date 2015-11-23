@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05BA119B-E6E2-C160-80CE-192C415ACF39" containerWithKeyObject="E0646462-A0D4-A107-C642-9CEA4B572447" localFKIndex="4F95BE40-8FD9-28E4-5E92-832BA8737099" name="Drinks_Season_FK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>9F12ECD3-D6AB-355E-B8F3-5DD4C28462D7</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A5C4CBAE-0E60-94AD-8928-11851672C3E8</referredTableID>
+<keyObject>284A4EFD-1C07-70EA-5AE2-BEEEA1EFB079</keyObject>
+<referredKeyID>284A4EFD-1C07-70EA-5AE2-BEEEA1EFB079</referredKeyID>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

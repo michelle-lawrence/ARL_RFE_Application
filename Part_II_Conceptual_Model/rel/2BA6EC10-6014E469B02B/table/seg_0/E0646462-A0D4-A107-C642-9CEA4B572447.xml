@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E0646462-A0D4-A107-C642-9CEA4B572447" name="Drinks">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>7D433AA1-CFB8-5811-644F-9471C9D0C96A</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="drink_no" id="F5E3D8D5-D98E-76F3-C257-1FA555B8D8C0">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>1DE43847-BB77-CFB0-F0AE-6EA7F40ABCCD</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="DF8C3BB5-F8ED-4AF5-8AC0-C1C806CF0DEE">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>1989C02F-DD47-8147-EDB7-1882F9A36C18</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ingredients" id="1B4F5FEB-DB1B-B456-F55C-191C1304AB67">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>009723EA-57F7-0BC9-BC7D-491129837F1B</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="calories" id="B3599AB8-768A-3FD2-9337-27AA54FE2FA5">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>9EC26086-D723-021D-A015-8E879E12D268</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cost" id="A6561EF6-630B-1C86-29A9-0BA8379BA93C">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>5F4F2A61-ADCB-03C8-EEAB-2BD56D8F41FE</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="img_filename" id="8BDBC1FA-E874-59BA-2B6C-44A79E0A6F72">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>5A59CA35-30F7-8EE1-DEB2-7A38A351BF9D</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="8CCEF3F7-A3FC-8046-3225-1AB856A3C6E9">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>DA887586-EB7D-7592-91A0-7769FEBBC9CA</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="directions" id="47D4E62F-8C45-613D-A4E1-771908C07F83">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>D15196CB-FF44-77A7-757D-EC0365E03531</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alcoholic" id="FC2A5E11-22E8-0F40-A86E-CE8A83297A68">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>0F230540-DA3A-EB62-41E7-435F9395791F</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Season_season_no" id="9B89A493-C7B2-D3C0-538C-0E6C93022489">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>8D82B98A-D5D0-9331-A3FF-52060D8B2DFC</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05BA119B-E6E2-C160-80CE-192C415ACF39" referredColumn="5F482A16-2813-AD1D-E0DF-3C0FFCCEF39F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2B6BC928-4392-0DE3-7543-B98B000870D5" name="Drinks_PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:43:59 UTC</createdTime>
+<generatorID>C4029542-7746-7FFF-EF01-362E3922D2E9</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5E3D8D5-D98E-76F3-C257-1FA555B8D8C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F95BE40-8FD9-28E4-5E92-832BA8737099" name="Drinks_Season_FK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>9F12ECD3-D6AB-355E-B8F3-5DD4C28462D7</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B89A493-C7B2-D3C0-538C-0E6C93022489"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5C4CBAE-0E60-94AD-8928-11851672C3E8" name="Season">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>5D105562-50EF-2E8C-25EC-8489C226E666</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="season_no" id="5F482A16-2813-AD1D-E0DF-3C0FFCCEF39F">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>E4A05DA9-E833-9E67-5391-A12D0263ABC2</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="34984C9F-579D-48C8-CF18-B4D19151BBDD">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>10236F91-9281-F812-44F2-032B9B784ED5</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_date" id="61F1EC55-827A-F4D1-12E1-3C63E30DB450">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>5AFD7068-FC02-7319-5C5F-4A07E06488B7</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_date" id="7D331BDB-379A-004C-9E2C-854568526742">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>6E9EDF76-AA97-E201-D298-64AA9530E3A9</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="avg_high_temp" id="A6B095F6-E6D1-1713-0126-6C51FEAF06A9">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>5ADC3C80-B6ED-4C39-591F-64DFC3400A67</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="avg_low_temp" id="864C2671-6D6F-C714-D963-5E3B9DB37199">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>BE44377B-830E-01B3-E251-909AF16482BC</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="284A4EFD-1C07-70EA-5AE2-BEEEA1EFB079" name="Season_PK">
+<createdBy>Michelle</createdBy>
+<createdTime>2015-11-23 02:44:00 UTC</createdTime>
+<generatorID>B92EF9D0-2E1B-9B6B-0FE6-5B0987E2C6BA</generatorID>
+<ownerDesignName>Part_II_Conceptual_Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F482A16-2813-AD1D-E0DF-3C0FFCCEF39F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
