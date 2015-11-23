@@ -1,2 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.relational.RelationalDesign/>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="E0646462-A0D4-A107-C642-9CEA4B572447" name="Drinks" seqName="seg_0"/>
+   <object objectType="Table" objectID="A5C4CBAE-0E60-94AD-8928-11851672C3E8" name="Season" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="05BA119B-E6E2-C160-80CE-192C415ACF39" name="Drinks_Season_FK" seqName="seg_0" containerID="E0646462-A0D4-A107-C642-9CEA4B572447" refContainerID="A5C4CBAE-0E60-94AD-8928-11851672C3E8"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>
